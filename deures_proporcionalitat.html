@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deures - Repartiments Proporcionals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .info-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .info-box p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .icon {
+            font-size: 1.8em;
+        }
+        
+        .problem {
+            background: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .problem:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .problem-number {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+        
+        .problem-text {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .answer-box {
+            background: white;
+            border: 2px dashed #667eea;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        
+        .answer-label {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .answer-line {
+            border-bottom: 1px solid #ccc;
+            min-height: 30px;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+        
+        .tips {
+            background: #fff9e6;
+            border-left: 5px solid #ffc107;
+            padding: 15px 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        
+        .tips h3 {
+            color: #f57c00;
+            margin-bottom: 10px;
+        }
+        
+        .tips ul {
+            margin-left: 20px;
+            color: #333;
+        }
+        
+        .tips li {
+            margin: 8px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            .problem:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 DEURES DE MATEMÀTIQUES</h1>
+            <p class="subtitle">Repartiments Proporcionals, Velocitat i Mescles</p>
+        </header>
+        
+        <div class="info-box">
+            <p><strong>📚 Nom i Cognoms:</strong> _________________________________</p>
+            <p><strong>📅 Data:</strong> _____________</p>
+            <p><strong>🏫 Curs:</strong> 2n ESO</p>
+        </div>
+        
+        <!-- SECCIÓ 1: REPARTIMENTS PROPORCIONALS -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">💰</span>
+                <span>Repartiments Proporcionals</span>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 1</span>
+                <p class="problem-text">
+                    Tres amics han jugat a la loteria aportant 4€, 6€ i 10€ respectivament. 
+                    Els ha tocat un premi de 500€. Quant ha de rebre cadascun si ho reparteixen 
+                    proporcionalment al que ha jugat?
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 2</span>
+                <p class="problem-text">
+                    Quatre treballadors es reparteixen 1.200€ de manera proporcional a les 
+                    hores treballades durant la setmana: 8 hores, 12 hores, 15 hores i 25 hores. 
+                    Calcula quant cobra cadascun.
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 3</span>
+                <p class="problem-text">
+                    Tres socis d'una empresa es reparteixen 360.000€ de beneficis. El primer 
+                    soci va invertir 15.000€, el segon 25.000€ i el tercer 20.000€. Fes el 
+                    repartiment proporcional a la inversió de cadascun.
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 4</span>
+                <p class="problem-text">
+                    Dos germans es reparteixen una herència de 84.000€ proporcionalment 
+                    a les seves edats: 21 anys i 35 anys. Quant rebrà cadascun?
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SECCIÓ 2: PROBLEMES DE VELOCITAT -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">🚗</span>
+                <span>Problemes de Velocitat</span>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 5</span>
+                <p class="problem-text">
+                    Un autobús va a una velocitat de 72 km/h. Quant de temps trigarà a 
+                    recórrer una distància de 216 km? Expressa el resultat en hores i minuts.
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 6</span>
+                <p class="problem-text">
+                    Un cotxe surt de València a Madrid (distància: 360 km) circulant a 90 km/h. 
+                    Un altre cotxe surt al mateix temps de Sevilla a Saragossa circulant a 
+                    110 km/h i ha de recórrer 880 km. Quin dels dos arribarà abans a la seva 
+                    destinació?
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 7</span>
+                <p class="problem-text">
+                    Dos trens surten d'una estació al mateix temps en direccions oposades. 
+                    Un va cap al nord a 95 km/h i l'altre cap al sud a 85 km/h. Quina 
+                    distància els separarà al cap de 4 hores?
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 8</span>
+                <p class="problem-text">
+                    Una moto circula a 80 km/h durant 2,75 hores. Quina distància ha recorregut? 
+                    (Recorda: 2,75 h = 2 h i 45 min)
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SECCIÓ 3: PROBLEMES DE MESCLES -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">☕</span>
+                <span>Problemes de Mescles</span>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 9</span>
+                <p class="problem-text">
+                    En una cafeteria barregem 8 kg de cafè de qualitat superior a 15€/kg 
+                    amb 12 kg de cafè de qualitat mitjana a 10€/kg. Quin és el preu per 
+                    quilogram de la mescla resultant?
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 10</span>
+                <p class="problem-text">
+                    Per elaborar un batut barregem 6 litres de llet a 0,90€/litre amb 
+                    4 litres de llet de soja a 1,50€/litre.<br>
+                    a) Quin és el cost total de cada ingredient?<br>
+                    b) Quin és el preu per litre de la barreja?
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 11</span>
+                <p class="problem-text">
+                    En un celler es barregen 30 hectolitres de vi a 4€/litre amb 20 hectolitres 
+                    de vi a 2,50€/litre. (Recorda: 1 hl = 100 litres)<br>
+                    a) Calcula el cost total de cada tipus de vi.<br>
+                    b) Troba el preu per litre de la mescla.
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+            
+            <div class="problem">
+                <span class="problem-number">Problema 12</span>
+                <p class="problem-text">
+                    Una pastisseria barreja 15 kg de farina integral a 1,20€/kg amb 25 kg 
+                    de farina blanca a 0,80€/kg. Quin és el preu per quilogram de la mescla?
+                </p>
+                <div class="answer-box">
+                    <span class="answer-label">Resolució:</span>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <span class="answer-label">Resposta:</span>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONSELLS -->
+        <div class="tips">
+            <h3>💡 Consells importants:</h3>
+            <ul>
+                <li><strong>Llegeix</strong> bé l'enunciat i subratlla les dades importants</li>
+                <li><strong>Escriu</strong> les dades que et donen i el que et demanen</li>
+                <li><strong>Utilitza</strong> les fórmules que hem après a classe</li>
+                <li><strong>Comprova</strong> que el resultat té sentit</li>
+                <li><strong>No oblidis</strong> posar les unitats en la resposta final</li>
+                <li><strong>Revisa</strong> els càlculs abans de lliurar els deures</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p><strong>Data de lliurament:</strong> _______________</p>
+            <p style="margin-top: 10px; font-style: italic;">Treballa amb ordre i tranquil·litat. Bon treball! 📝</p>
+        </footer>
+    </div>
+</body>
+</html>
